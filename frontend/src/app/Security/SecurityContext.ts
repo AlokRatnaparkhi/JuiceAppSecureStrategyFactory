@@ -27,7 +27,7 @@ export interface SecureStrategy
 
 export class SQLi implements SecureStrategy
 {
-
+    //Input Validation Secure Design Pattern
     executeSecureStrategy(paramvalue:string):boolean
     { 
         let regExp=new RegExp('^[a-z0-9 \s @ . -]+$','i');
@@ -50,6 +50,9 @@ export class XSS implements SecureStrategy
             such as escapeSpecialCharacters(), inputValidation()
             inside this method
         */
+
+
+       //Input Validation Secure Design Pattern 
        let flag=false;
        let maliciousKeywords= ["script","<",">","%","alert","document","cookie",".","javascript","frame","window"] //Black list example
         console.log("Starting XSS detection engine.....");
