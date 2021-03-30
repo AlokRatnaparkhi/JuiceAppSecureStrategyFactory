@@ -42,6 +42,7 @@ import { DeliveryMethodComponent } from './delivery-method/delivery-method.compo
 import { PhotoWallComponent } from './photo-wall/photo-wall.component'
 import { DeluxeUserComponent } from './deluxe-user/deluxe-user.component'
 import { AccountingGuard, AdminGuard, LoginGuard } from './app.guard'
+import {ErrorComponent} from './error/error.component'
 
 export function token1 (...args: number[]) {
   let L = Array.prototype.slice.call(args)
@@ -74,6 +75,12 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent
   },
+  {
+    path: 'error',
+    component: ErrorComponent
+  },
+
+
   {
     path: 'address/select',
     component: AddressSelectComponent,

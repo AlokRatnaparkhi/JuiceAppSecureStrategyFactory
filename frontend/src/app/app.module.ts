@@ -129,7 +129,8 @@ import { MatPasswordStrengthModule } from '@angular-material-extensions/password
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { FeedbackDetailsComponent } from './feedback-details/feedback-details.component'
 import { MatSliderModule } from '@angular/material/slider'
-import { MatChipsModule } from '@angular/material/chips'
+import { MatChipsModule } from '@angular/material/chips';
+import { ErrorComponent } from './error/error.component'
 
 export function HttpLoaderFactory (http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -190,7 +191,8 @@ export function HttpLoaderFactory (http: HttpClient) {
     DeliveryMethodComponent,
     PhotoWallComponent,
     DeluxeUserComponent,
-    FeedbackDetailsComponent
+    FeedbackDetailsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

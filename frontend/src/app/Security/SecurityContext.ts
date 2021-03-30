@@ -44,7 +44,7 @@ export class SQLi implements SecureStrategy
 export class XSS implements SecureStrategy
 {
 
-    executeSecureStrategy(q:string)
+    executeSecureStrategy(q:string):boolean
     {   //Plug in your algorithm here
         /*  You can add multiple steps to be executed as a part of secure strategy 
             such as escapeSpecialCharacters(), inputValidation()
@@ -53,6 +53,7 @@ export class XSS implements SecureStrategy
 
 
        //Input Validation Secure Design Pattern 
+       console.log('Inside the strategy..')
        let flag=false;
        let maliciousKeywords= ["script","<",">","%","alert","document","cookie",".","javascript","frame","window"] //Black list example
         console.log("Starting XSS detection engine.....");

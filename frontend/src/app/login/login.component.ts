@@ -80,7 +80,7 @@ export class LoginComponent implements OnInit {
     for(var param in this.user)
     { 
       if(secureContext.executeSecureStrategy(this.user[param]))
-      {   this.router.navigate(['/about']);
+      {   this.router.navigate(['/error']);
           return;
       }
 
